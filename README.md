@@ -159,7 +159,7 @@ Multi-tool support.
 
 | | |
 |---|---|
-| **Documentation** | [org/repo-name](https://github.com/org/repo-name) |
+| **Documentation** | [Qovery MCP configuration](https://www.qovery.com/docs/copilot/mcp-server) |
 | **Maintainer** | 🏷️ Qovery (Official) |
 | **What it does** | Cluster management, app deployments, security, self-service. |
 | **Note** | Guardrails and permissions management included. |
