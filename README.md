@@ -155,6 +155,15 @@ Multi-tool support.
 | **What it does** | Container management, deployments, environment operations. |
 | **Note** | 🛡️ Read-only mode available for safety. |
 
+### Qovery
+
+| | |
+|---|---|
+| **Documentation** | [Qovery MCP configuration](https://www.qovery.com/docs/copilot/mcp-server) |
+| **Maintainer** | 🏷️ Qovery (Official) |
+| **What it does** | Cluster management, app deployments, security, self-service. |
+| **Note** | Guardrails and permissions management included. |
+
 ## 🚀 CI/CD
 
 ### Argo CD
