@@ -155,6 +155,15 @@ Multi-tool support.
 | **What it does** | Container management, deployments, environment operations. |
 | **Note** | 🛡️ Read-only mode available for safety. |
 
+### Qovery
+
+| | |
+|---|---|
+| **Documentation** | [org/repo-name](https://github.com/org/repo-name) |
+| **Maintainer** | 🏷️ Qovery (Official) |
+| **What it does** | Cluster management, app deployments, security, self-service. |
+| **Note** | Guardrails and permissions management included. |
+
 ## 🚀 CI/CD
 
 ### Argo CD
