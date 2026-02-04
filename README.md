@@ -4,7 +4,9 @@
 
 **Curated by [Wagner](https://www.trywagner.dev)** — The first AI DevOps teammate
 
-Star history: https://www.star-history.com/#WagnerAgent/awesome-mcp-servers-devops&type=date&legend=top-left
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=WagnerAgent/awesome-mcp-servers-devops&type=date&legend=top-left)](https://www.star-history.com/#WagnerAgent/awesome-mcp-servers-devops&type=date&legend=top-left)
 
 ## Contents
 
