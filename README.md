@@ -4,11 +4,18 @@
 
 **Curated by [Wagner](https://www.trywagner.dev)** — The first AI DevOps teammate
 
+<iframe style="width:100%;height:auto;min-width:600px;min-height:400px;" src="https://www.star-history.com/embed?secret=Z2l0aHViX3BhdF8xMUFPRFFDSUkwekZVU2dmYTlGNEpCXzNQTFNDZjYxMllzZ3FVcE5QY0NVMU52VHhPS1lLMGhxaHQzR2dQdFhOZzY0UFlKVjVBTHVnRVV6bXhZ#WagnerAgent/awesome-mcp-servers-devops&type=date&legend=top-left" frameBorder="0"></iframe>
+
 ## Contents
 
 - [Source Control](#-source-control)
 - [Infrastructure as Code](#%EF%B8%8F-infrastructure-as-code)
 - [Kubernetes and Containers](#%EF%B8%8F-kubernetes-and-containers)
+- [Command Line and Local Ops](#%EF%B8%8F-command-line-and-local-ops)
+- [Browser Automation](#-browser-automation)
+- [Code Execution](#%EF%B8%8F-code-execution)
+- [Coding Agents](#-coding-agents)
+- [Aggregators](#-aggregators)
 - [CI/CD](#-cicd)
 - [Cloud Platforms](#%EF%B8%8F-cloud-platforms)
 - [Observability](#-observability)
@@ -29,6 +36,13 @@ The official GitHub MCP server — battle-tested and feature-complete.
 | **What it does** | Repository operations, issues, PRs, code search, GitHub Actions workflows. |
 | **Standout feature** | 🛡️ Lockdown mode for public repos to prevent prompt injection. |
 
+**Community options**
+
+| Repo | Notes |
+|------|-------|
+| [ddukbg/github-enterprise-mcp](https://github.com/ddukbg/github-enterprise-mcp) | GitHub Enterprise API integration. |
+| [adhikasp/mcp-git-ingest](https://github.com/adhikasp/mcp-git-ingest) | Read and analyze GitHub repositories. |
+
 ### GitLab
 
 Native GitLab integration via their Duo platform.
@@ -40,6 +54,13 @@ Native GitLab integration via their Duo platform.
 | **What it does** | Issues, merge requests, pipelines, commits, cross-project search. |
 | **Note** | ⚠️ Requires GitLab 18.6+ for HTTP transport. |
 
+**Community options**
+
+| Repo | Notes |
+|------|-------|
+| [kopfrechner/gitlab-mr-mcp](https://github.com/kopfrechner/gitlab-mr-mcp) | Merge requests + issues for GitLab. |
+| [modelcontextprotocol/server-gitlab](https://github.com/modelcontextprotocol/servers/tree/main/server-gitlab) | Reference GitLab server implementation. |
+
 ### Azure DevOps
 
 | | |
@@ -47,6 +68,23 @@ Native GitLab integration via their Duo platform.
 | **Repo** | [tiberriver256/azure-devops-mcp-server](https://github.com/tiberriver256/azure-devops-mcp-server) |
 | **Maintainer** | 👥 Community |
 | **What it does** | Repos, work items, pipelines, boards. |
+
+**Community options**
+
+| Repo | Notes |
+|------|-------|
+| [Tiberriver256/mcp-server-azure-devops](https://github.com/Tiberriver256/mcp-server-azure-devops) | Azure DevOps integration via MCP. |
+| [stefanskiasan/azure-devops-mcp-server](https://github.com/stefanskiasan/azure-devops-mcp-server) | Azure DevOps server for Cline. |
+| [Vortiago/mcp-azure-devops](https://github.com/Vortiago/mcp-azure-devops) | Azure DevOps via Python SDK. |
+| [aaronsb/ado-mcp](https://github.com/aaronsb/ado-mcp) | Azure DevOps tools for pipelines/work items. |
+
+### Gitea & Gitee
+
+| Repo | Notes |
+|------|-------|
+| [gitea/gitea-mcp](https://gitea.com/gitea/gitea-mcp) | MCP server for Gitea instances. |
+| [oschina/gitee](https://github.com/oschina/gitee) | Gitee API integration. |
+| [modelcontextprotocol/server-git](https://github.com/modelcontextprotocol/servers/tree/main/server-git) | Reference local Git server implementation. |
 
 ## 🏗️ Infrastructure as Code
 
@@ -61,6 +99,18 @@ HashiCorp's official MCP server for Terraform workflows.
 | **Maintainer** | 🏷️ HashiCorp (Official) |
 | **What it does** | Registry search, workspace management, plan/apply operations, state inspection. |
 | **Status** | 🧪 Beta. |
+
+**Community implementations**
+
+| Repo | Notes |
+|------|-------|
+| [dulltz/mcp-server-hcp-terraform](https://github.com/dulltz/mcp-server-hcp-terraform) | Terraform Cloud/HCP focused. |
+| [guilhermeyoshida/mcp-terraform-assistant](https://github.com/guilhermeyoshida/mcp-terraform-assistant) | Local Terraform operations. |
+| [jashkahar/Terraform-MCP-Server](https://github.com/jashkahar/Terraform-MCP-Server) | Exposes Terraform operations via MCP. |
+| [nwiizo/tfmcp](https://github.com/nwiizo/tfmcp) | Rust-based Terraform MCP server. |
+| [severity1/terraform-cloud-mcp](https://github.com/severity1/terraform-cloud-mcp) | Terraform Cloud API integration. |
+| [thrash888/terraform-mcp-server](https://github.com/thrash888/terraform-mcp-server) | Terraform Registry MCP server. |
+| [westonplatter/mcp-terraform-python](https://github.com/westonplatter/mcp-terraform-python) | Terraform operations in Python. |
 
 ### Vault
 
@@ -94,6 +144,13 @@ The open-source Terraform alternative has its own MCP server.
 | **Maintainer** | 🏷️ OpenTofu (Official) |
 | **What it does** | Registry search, provider/module documentation, resource docs. |
 | **Remote endpoint** | 🌐 `mcp.opentofu.org` |
+
+### Multi-IaC
+
+| | |
+|---|---|
+| **Repo** | [stakpak/mcp](https://github.com/stakpak/mcp) |
+| **What it does** | Terraform, Kubernetes, GitHub Actions, Dockerfile workflows. |
 
 ## ☸️ Kubernetes and Containers
 
@@ -137,6 +194,32 @@ Multi-tool support.
 | **Repo** | [alexei-led/k8s-mcp-server](https://github.com/alexei-led/k8s-mcp-server) |
 | **Why choose it** | 🧰 kubectl + helm + istioctl + argocd in one server. |
 
+#### Community Kubernetes servers
+
+| Repo | Notes |
+|------|-------|
+| [rohitg00/kubectl-mcp-server](https://github.com/rohitg00/kubectl-mcp-server) | Kubernetes CLI via MCP (read/write). |
+| [aadarshjain/kubectl-mcp-server](https://github.com/aadarshjain/kubectl-mcp-server) | Local kubectl server (read-only by default). |
+| [manusa/kubernetes-mcp-server](https://github.com/manusa/kubernetes-mcp-server) | Kubernetes + OpenShift support. |
+| [strowk/mcp-k8s-go](https://github.com/strowk/mcp-k8s-go) | Go-based Kubernetes operations. |
+| [weibaohui/k8m](https://github.com/weibaohui/k8m) | Multi-cluster management + UI. |
+| [weibaohui/kom](https://github.com/weibaohui/kom) | SDK + multi-cluster operations. |
+| [wenhuwang/mcp-k8s-eye](https://github.com/wenhuwang/mcp-k8s-eye) | Cluster health analysis and ops. |
+
+### Tilt
+
+| | |
+|---|---|
+| **Repo** | [rrmistry/tilt-mcp](https://github.com/rrmistry/tilt-mcp) |
+| **What it does** | Tilt resources, logs, and dev workflow control. |
+
+### Nomad
+
+| | |
+|---|---|
+| **Repo** | [kocierik/mcp-nomad](https://github.com/kocierik/mcp-nomad) |
+| **What it does** | Nomad cluster management and analysis. |
+
 ### Docker Hub
 
 | | |
@@ -164,6 +247,78 @@ Multi-tool support.
 | **What it does** | Cluster management, app deployments, security, self-service. |
 | **Note** | Guardrails and permissions management included. |
 
+## 🖥️ Command Line & Local Ops
+
+Tools for executing commands or interacting with local environments safely.
+
+| Repo | Notes |
+|------|-------|
+| [MladenSU/cli-mcp-server](https://github.com/MladenSU/cli-mcp-server) | Secure CLI execution with policies. |
+| [g0t4/mcp-server-commands](https://github.com/g0t4/mcp-server-commands) | Run commands and scripts via MCP. |
+| [tumf/mcp-shell-server](https://github.com/tumf/mcp-shell-server) | Shell command execution server. |
+| [ferrislucas/iterm-mcp](https://github.com/ferrislucas/iterm-mcp) | iTerm integration for macOS. |
+| [OthmaneBlial/term_mcp_deepseek](https://github.com/OthmaneBlial/term_mcp_deepseek) | Terminal server for DeepSeek. |
+| [maxim-saplin/mcp_safe_local_python_executor](https://github.com/maxim-saplin/mcp_safe_local_python_executor) | Safe local Python execution. |
+| [wonderwhy-er/DesktopCommanderMCP](https://github.com/wonderwhy-er/DesktopCommanderMCP) | Local file/process control. |
+| [automateyournetwork/pyATS_MCP](https://github.com/automateyournetwork/pyATS_MCP) | Cisco pyATS network automation. |
+
+## 🌐 Browser Automation
+
+| Repo | Notes |
+|------|-------|
+| [aircodelabs/grasp](https://github.com/aircodelabs/grasp) | Self-hosted browser agent. |
+| [browserbase/mcp-server-browserbase](https://github.com/browserbase/mcp-server-browserbase) | Cloud browser automation. |
+| [browsermcp/mcp](https://github.com/browsermcp/mcp) | Local Chrome control. |
+| [Automata-Labs-team/MCP-Server-Playwright](https://github.com/Automata-Labs-team/MCP-Server-Playwright) | Playwright automation. |
+| [blackwhite084/playwright-plus-python-mcp](https://github.com/blackwhite084/playwright-plus-python-mcp) | Playwright + Python. |
+| [executeautomation/playwright-mcp-server](https://github.com/executeautomation/playwright-mcp-server) | Playwright MCP server. |
+| [microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp) | Official Playwright MCP. |
+| [co-browser/browser-use-mcp-server](https://github.com/co-browser/browser-use-mcp-server) | browser-use with SSE transport. |
+| [eyalzh/browser-control-mcp](https://github.com/eyalzh/browser-control-mcp) | Browser control MCP. |
+| [ndthanhdev/mcp-browser-kit](https://github.com/ndthanhdev/mcp-browser-kit) | Browser automation toolkit. |
+| [kimtth/mcp-aoai-web-browsing](https://github.com/kimtth/mcp-aoai-web-browsing) | Web browsing MCP server. |
+| [scrapeless-ai/scrapeless-mcp-server](https://github.com/scrapeless-ai/scrapeless-mcp-server) | SERP and web data access. |
+| [getrupt/ashra-mcp](https://github.com/getrupt/ashra-mcp) | Browser automation server. |
+
+## ⚙️ Code Execution
+
+| Repo | Notes |
+|------|-------|
+| [pydantic/pydantic-ai (mcp-run-python)](https://github.com/pydantic/pydantic-ai/tree/main/packages/mcp-run-python) | Run Python in a sandbox. |
+| [yepcode/mcp-server-js](https://github.com/yepcode/mcp-server-js) | Secure JS/Python sandbox. |
+| [alfonsograziano/node-code-sandbox-mcp](https://github.com/alfonsograziano/node-code-sandbox-mcp) | Node.js Docker sandbox. |
+| [ckanthony/openapi-mcp](https://github.com/ckanthony/openapi-mcp) | Access APIs from OpenAPI specs. |
+
+## 🤖 Coding Agents
+
+| Repo | Notes |
+|------|-------|
+| [bgauryy/octocode-mcp](https://github.com/bgauryy/octocode-mcp) | GitHub research + analysis agent. |
+| [oraios/serena](https://github.com/oraios/serena) | LSP-based coding agent. |
+| [ezyang/codemcp](https://github.com/ezyang/codemcp) | Simple coding agent MCP. |
+| [Wolfe-Jam/claude-faf-mcp](https://github.com/Wolfe-Jam/claude-faf-mcp) | Persistent project context tools. |
+| [juehang/vscode-mcp-server](https://github.com/juehang/vscode-mcp-server) | VS Code workspace tooling. |
+| [doggybee/mcp-server-leetcode](https://github.com/doggybee/mcp-server-leetcode) | LeetCode problem access. |
+| [jinzcdev/leetcode-mcp-server](https://github.com/jinzcdev/leetcode-mcp-server) | LeetCode (global/China) access. |
+| [willibrandon/CursorMCPMonitor](https://github.com/willibrandon/CursorMCPMonitor) | MCP monitoring for Cursor. |
+
+## 🔗 Aggregators
+
+| Repo | Notes |
+|------|-------|
+| [askbudi/roundtable](https://github.com/askbudi/roundtable) | Multi-assistant MCP hub. |
+| [composiohq/rube](https://github.com/composiohq/rube) | 500+ app integrations. |
+| [julien040/anyquery](https://github.com/julien040/anyquery) | SQL over 40+ apps. |
+| [metatool-ai/metatool-app](https://github.com/metatool-ai/metatool-app) | MetaMCP with GUI. |
+| [mindsdb/mindsdb](https://github.com/mindsdb/mindsdb) | Data unification + MCP. |
+| [glenngillen/mcpmcp-server](https://github.com/glenngillen/mcpmcp-server) | MCP server registry. |
+| [wegotdocs/open-mcp](https://github.com/wegotdocs/open-mcp) | Turn web APIs into MCP. |
+| [PipedreamHQ/pipedream](https://github.com/PipedreamHQ/pipedream/tree/master/packages/mcp-server) | 2,500+ API integrations. |
+| [VeriTeknik/pluggedin-mcp-proxy](https://github.com/VeriTeknik/pluggedin-mcp-proxy) | Proxy + discovery layer. |
+| [tigranbs/mcgravity](https://github.com/tigranbs/mcgravity) | MCP load balancing. |
+| [waystation-ai/mcp](https://github.com/waystation-ai/mcp) | Connect MCP hosts to apps. |
+| [sxhxliang/mcp-access-point](https://github.com/sxhxliang/mcp-access-point) | One-click MCP wrapper. |
+
 ## 🚀 CI/CD
 
 ### Argo CD
@@ -187,6 +342,42 @@ GitOps deployment management via AI.
 | **What it does** | Build status, job triggers, console logs. |
 | **Requires** | ⚠️ Jenkins 2.479+. |
 
+### GitHub Actions
+
+| | |
+|---|---|
+| **Repo** | [Tiberriver256/mcp-server-github-actions](https://github.com/Tiberriver256/mcp-server-github-actions) |
+| **Maintainer** | 👥 Community |
+| **What it does** | Workflow runs, logs, and pipeline management. |
+
+### Codemagic (Mobile CI/CD)
+
+| | |
+|---|---|
+| **Repo** | [stefanoamorelli/codemagic-mcp](https://github.com/stefanoamorelli/codemagic-mcp) |
+| **Maintainer** | 👥 Community |
+| **What it does** | Mobile CI/CD pipeline control. |
+
+### DevOps Visibility
+
+| Repo | Notes |
+|------|-------|
+| [SBDI/mcp-devps-hub](https://github.com/SBDI/mcp-devps-hub) | End-to-end DevOps visibility. |
+| [gofireflyio/firefly-mcp](https://github.com/gofireflyio/firefly-mcp) | Cloud resource discovery and codification. |
+
+### CI/CD Helpers
+
+| Repo | Notes |
+|------|-------|
+| [Acid-base/FastMCP-Proper](https://github.com/Acid-base/FastMCP-Proper) | MCP server with CI/CD tooling. |
+| [lobehub/mcp-hello-world](https://github.com/lobehub/mcp-hello-world) | CI/CD test server. |
+
+### Build Tools
+
+| Repo | Notes |
+|------|-------|
+| [arvindand/maven-tools-mcp](https://github.com/arvindand/maven-tools-mcp) | Maven and build tooling. |
+
 ## ☁️ Cloud Platforms
 
 ### AWS
@@ -199,6 +390,20 @@ AWS provides a collection of MCP servers for their services.
 | **Docs** | [AWS MCP Servers](https://awslabs.github.io/mcp/) |
 | **Maintainer** | 🏷️ AWS (Official) |
 | **Includes** | 📦 AWS API server, Documentation server, Knowledge server, Prometheus server. |
+
+**Community options**
+
+| Repo | Notes |
+|------|-------|
+| [alexei-led/aws-mcp-server](https://github.com/alexei-led/aws-mcp-server) | AWS CLI-based MCP server. |
+
+### Azure
+
+| Repo | Notes |
+|------|-------|
+| [jdubois/azure-cli-mcp](https://github.com/jdubois/azure-cli-mcp) | Azure CLI wrapper. |
+| [hardik-id/azure-resource-graph-mcp-server](https://github.com/hardik-id/azure-resource-graph-mcp-server) | Azure Resource Graph queries. |
+| [erikhoward/adls-mcp-server](https://github.com/erikhoward/adls-mcp-server) | Azure Data Lake Storage. |
 
 ### Cloudflare
 
@@ -221,6 +426,13 @@ Comprehensive coverage of Cloudflare's platform.
 | **What it does** | ECS, Cloud Monitor, OOS operations. |
 | **Also available** | 📦 [ACK (Kubernetes)](https://github.com/aliyun/alibabacloud-ack-mcp-server), [DataWorks](https://github.com/aliyun/alibabacloud-dataworks-mcp-server), [DMS](https://github.com/aliyun/alibabacloud-dms-mcp-server), [Function Compute](https://github.com/aliyun/alibabacloud-fc-mcp-server). |
 
+### Other Platforms
+
+| Repo | Notes |
+|------|-------|
+| [bright8192/esxi-mcp-server](https://github.com/bright8192/esxi-mcp-server) | VMware ESXi/vCenter management. |
+| [thunderboltsid/mcp-nutanix](https://github.com/thunderboltsid/mcp-nutanix) | Nutanix Prism Central integration. |
+
 ## 📊 Observability
 
 ### Grafana
@@ -242,8 +454,32 @@ Several community implementations available.
 | [pab1it0/prometheus-mcp-server](https://github.com/pab1it0/prometheus-mcp-server) | 🐍 Python | ⭐ 177 stars, well-documented. |
 | [yshngg/prometheus-mcp-server](https://github.com/yshngg/prometheus-mcp-server) | 🏎️ Go | ✅ 100% Prometheus API compatibility. |
 | [idanfishman/prometheus-mcp](https://github.com/idanfishman/prometheus-mcp) | 📇 Node.js | 📡 stdio + HTTP transports. |
+| [etruong42/prometheus-mcp](https://github.com/etruong42/prometheus-mcp) | 🐍 Python | Community implementation. |
+| [loginmqv/mcp-server-prometheus](https://github.com/loginmqv/mcp-server-prometheus) | 📇 Node.js | Prometheus MCP server. |
+| [CaesarYangs/prometheus_mcp_server](https://github.com/CaesarYangs/prometheus_mcp_server) | 🐍 Python | Prometheus MCP server. |
 
 AWS also provides a [Prometheus MCP Server](https://awslabs.github.io/mcp/servers/prometheus-mcp-server) for Amazon Managed Prometheus with SigV4 auth.
+
+### VictoriaMetrics
+
+| | |
+|---|---|
+| **Repo** | [VictoriaMetrics-Community/mcp-victoriametrics](https://github.com/VictoriaMetrics-Community/mcp-victoriametrics) |
+| **What it does** | VictoriaMetrics query + metrics access. |
+
+### Alertmanager
+
+| | |
+|---|---|
+| **Repo** | [kaznak/alertmanager-mcp](https://github.com/kaznak/alertmanager-mcp) |
+| **What it does** | Alertmanager alerts and silences. |
+
+### APM & Monitoring
+
+| Repo | Notes |
+|------|-------|
+| [dynatrace-oss/dynatrace-mcp](https://github.com/dynatrace-oss/dynatrace-mcp) | Dynatrace monitoring integration. |
+| [last9/last9-mcp-server](https://github.com/last9/last9-mcp-server) | Last9 observability. |
 
 ## 🔒 Security
 
@@ -268,6 +504,23 @@ Vulnerability scanning directly from your AI assistant.
 | **What it does** | 🔍 Static analysis, OWASP scanning, custom rule execution. |
 | **Remote** | 🌐 `https://mcp.semgrep.ai` (no auth required). |
 
+### Community Security Servers
+
+| Repo | Notes |
+|------|-------|
+| [LaurieWired/GhidraMCP](https://github.com/LaurieWired/GhidraMCP) | Ghidra reverse engineering. |
+| [13bm/GhidraMCP](https://github.com/13bm/GhidraMCP) | Ghidra analysis tools. |
+| [BurtTheCoder/mcp-shodan](https://github.com/BurtTheCoder/mcp-shodan) | Shodan search + CVE data. |
+| [BurtTheCoder/mcp-virustotal](https://github.com/BurtTheCoder/mcp-virustotal) | VirusTotal scanning. |
+| [fr0gger/MCP_Security](https://github.com/fr0gger/MCP_Security) | ORKL threat intelligence. |
+| [girste/mcp-cybersec-watchdog](https://github.com/girste/mcp-cybersec-watchdog) | Linux security audit. |
+| [qianniuspace/mcp-security-audit](https://github.com/qianniuspace/mcp-security-audit) | npm dependency audits. |
+| [rad-security/mcp-server](https://github.com/rad-security/mcp-server) | Kubernetes security insights. |
+| [roadwy/cve-search_mcp](https://github.com/roadwy/cve-search_mcp) | CVE-Search API. |
+| [securityfortech/secops-mcp](https://github.com/securityfortech/secops-mcp) | Security testing toolbox. |
+| [slouchd/cyberchef-api-mcp-server](https://github.com/slouchd/cyberchef-api-mcp-server) | CyberChef API access. |
+| [nickpending/mcp-recon](https://github.com/nickpending/mcp-recon) | Recon + domain analysis. |
+
 ## 📝 Collaboration
 
 ### Atlassian (Jira + Confluence)
@@ -281,6 +534,27 @@ Vulnerability scanning directly from your AI assistant.
 | **Security** | 🔐 OAuth 2.0, respects existing permissions. |
 
 Community alternative with Server/Data Center support: [sooperset/mcp-atlassian](https://github.com/sooperset/mcp-atlassian).
+
+### Jira (Community)
+
+| | |
+|---|---|
+| **Repo** | [nguyenvanduocit/jira-mcp](https://github.com/nguyenvanduocit/jira-mcp) |
+| **What it does** | Jira issue queries and updates. |
+
+### Project Management
+
+| | |
+|---|---|
+| **Repo** | [MervinPraison/praisonai-mcp](https://github.com/MervinPraison/praisonai-mcp) |
+| **What it does** | Project workflows via PraisonAI. |
+
+### Service Desks
+
+| Repo | Notes |
+|------|-------|
+| [effytech/freshdesk_mcp](https://github.com/effytech/freshdesk_mcp) | Freshdesk integration. |
+| [dbsanfte/topdesk-mcp](https://github.com/dbsanfte/topdesk-mcp) | TOPdesk integration. |
 
 ### Notion
 
@@ -344,6 +618,12 @@ Requirements:
 
 - [MCP Specification](https://modelcontextprotocol.io/)
 - [Anthropic MCP Documentation](https://docs.anthropic.com/en/docs/agents-and-tools/mcp)
+- [MCP Reference Servers](https://github.com/modelcontextprotocol/servers)
+- [awesome-mcp-servers](https://github.com/punkpeye/awesome-mcp-servers)
+- [awesome-mcp-clients](https://github.com/punkpeye/awesome-mcp-clients)
+- [awesome](https://github.com/sindresorhus/awesome)
+- [FastMCP (jlowin)](https://github.com/jlowin/fastmcp)
+- [FastMCP (punkpeye)](https://github.com/punkpeye/fastmcp)
 
 ## License
 
