@@ -447,6 +447,15 @@ Comprehensive coverage of Cloudflare's platform.
 | **Requires** | ⚠️ Grafana 9.0+. |
 | **Related** | 📦 [Loki MCP](https://github.com/grafana/loki-mcp), [Tempo MCP](https://github.com/grafana/tempo-mcp-server). |
 
+### Datadog
+
+| | |
+|---|---|
+| **Repo** | [TANTIOPE/datadog-mcp-server](https://github.com/TANTIOPE/datadog-mcp-server) |
+| **Maintainer** | 👥 Community |
+| **What it does** | 📊 Logs search, APM trace filtering, metrics queries, dashboards, monitors, incidents, SLOs, synthetics, and more. |
+| **Note** | 📦 Available via `npx datadog-mcp` or Docker. Supports stdio + HTTP transports, read-only mode. |
+
 ### Prometheus
 
 Several community implementations available.
