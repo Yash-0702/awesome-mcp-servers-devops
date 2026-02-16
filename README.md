@@ -257,6 +257,7 @@ Tools for executing commands or interacting with local environments safely.
 |------|-------|
 | [MladenSU/cli-mcp-server](https://github.com/MladenSU/cli-mcp-server) | Secure CLI execution with policies. |
 | [g0t4/mcp-server-commands](https://github.com/g0t4/mcp-server-commands) | Run commands and scripts via MCP. |
+| [Harsh-2002/SSH-MCP](https://github.com/Harsh-2002/SSH-MCP) | Remote SSH/SFTP with 43 tools: Docker, monitoring, databases, file ops, VoIP diagnostics, jump host support. |
 | [tumf/mcp-shell-server](https://github.com/tumf/mcp-shell-server) | Shell command execution server. |
 | [ferrislucas/iterm-mcp](https://github.com/ferrislucas/iterm-mcp) | iTerm integration for macOS. |
 | [OthmaneBlial/term_mcp_deepseek](https://github.com/OthmaneBlial/term_mcp_deepseek) | Terminal server for DeepSeek. |
